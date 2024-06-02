@@ -43,6 +43,11 @@ app.put('/:id', async (req, res) => {
     return res.send(anime)
 })
 
+app.delete('/:id', async (req, res) => {
+    const anime = await Anime.findByIdAndDelete(req.params.id)
+    return res.send(anime)
+})
+
 app.listen(port, async () => {
     await mongoose.connect('mongodb+srv://luizgmelo64:<password>@anime-api.uufxtxd.mongodb.net/?retryWrites=true&w=majority&appName=anime-api')
     console.log(`App is running at port ${port}`)
