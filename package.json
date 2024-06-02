@@ -1,0 +1,19 @@
+{
+  "name": "anime-api",
+  "version": "1.0.0",
+  "description": "An API of animes made in Nodejs with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizgmelo/anime-api.git"
+  },
+  "author": "Luiz Guilherme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizgmelo/anime-api/issues"
+  },
+  "homepage": "https://github.com/luizgmelo/anime-api#readme"
+}
