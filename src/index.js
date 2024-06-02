@@ -4,6 +4,21 @@ const app = express()
 app.use(express.json())
 const port = 3000
 
+const animeSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    num_ep: Number,
+    num_season: Number,
+    release_date: String 
+})
+
+const Anime = new mongoose.model('Anime', animeSchema)
+
+app.get('/', async (req, res) => {
+    const anime = await Anime.find()
+    return res.send(anime)
+})
+
 app.listen(port, async () => {
     await mongoose.connect('mongodb+srv://luizgmelo64:<password>@anime-api.uufxtxd.mongodb.net/?retryWrites=true&w=majority&appName=anime-api')
     console.log(`App is running at port ${port}`)
