@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/luizgmelo/anime-api/issues"
   },
-  "homepage": "https://github.com/luizgmelo/anime-api#readme"
+  "homepage": "https://github.com/luizgmelo/anime-api#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
 }
