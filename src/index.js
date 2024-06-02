@@ -19,6 +19,19 @@ app.get('/', async (req, res) => {
     return res.send(anime)
 })
 
+app.post('/', async (req, res) => {
+    const newAnime = new Anime({
+        title: req.body.title,
+        description: req.body.description,
+        num_ep: req.body.num_ep,
+        num_season: req.body.num_season,
+        release_date: req.body.release_date
+    }) 
+
+    await newAnime.save()
+    return res.send(newAnime)
+})
+
 app.listen(port, async () => {
     await mongoose.connect('mongodb+srv://luizgmelo64:<password>@anime-api.uufxtxd.mongodb.net/?retryWrites=true&w=majority&appName=anime-api')
     console.log(`App is running at port ${port}`)
